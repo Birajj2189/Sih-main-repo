@@ -2,6 +2,8 @@
 import { Fragment } from 'react'
 import Hero from './Hero';
 import React from 'react'
+import Registration from './Registration';
+import Login from './Login';
 
 import { Popover, Transition } from '@headlessui/react'
 import {
@@ -16,7 +18,18 @@ import {
   TranslateIcon
 } from '@heroicons/react/outline'
 import { ChevronDownIcon } from '@heroicons/react/solid'
+
+// React router DOM -----------
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+} from "react-router-dom";
 import {Link} from 'react-router-dom';
+import About from './About';
+
+
+
 
 
 const recentPosts = [
@@ -46,6 +59,23 @@ const services = [
   },
   {
     name: 'Automations',
+    href: '/',
+  },
+]
+const NavMenu = [
+  {
+    name: 'Home',
+    href: '/',
+  },
+  {
+    name: 'About Us',
+    href: '/About',
+  },
+  { name: 'Institute Login',
+    href: '/', 
+  },
+  {
+    name: 'Department Login',
     href: '/',
   },
 ]
@@ -81,6 +111,7 @@ function classNames(...classes) {
 export default function Example() {
   return (
     <div className="hero-container ">
+    <Router>
     <div className="nav-container">
     <Popover className="relative ">
       <div className="max-w-8xl mx-auto px-4 sm:px-6">
@@ -123,7 +154,7 @@ export default function Example() {
             <Link to="/" className="text-base font-medium text-gray-500 hover:text-gray-900">
               Home
             </Link>
-            <Link to="/" className="text-base font-medium text-gray-500 hover:text-gray-900">
+            <Link to="/About" className="text-base font-medium text-gray-500 hover:text-gray-900">
               About us
             </Link>
 
@@ -270,7 +301,7 @@ export default function Example() {
           </Popover.Group>
 
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">  
-            <Link to="/login" className="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white  bg-brightRed hover:bg-brightRedLight"
+            <Link to="/Login" className="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white  bg-brightRed hover:bg-brightRedLight"
             >
               Login
             </Link>
@@ -308,7 +339,7 @@ export default function Example() {
               </div>
               <div className="mt-6">
                 <nav className="grid gap-y-8">
-                  {services.map((item) => (
+                  {NavMenu.map((item) => (
                     <Link
                       key={item.name}
                       to={item.href}
@@ -341,14 +372,14 @@ export default function Example() {
               </div>
               <div>
                 <Link
-                  to="/login"
+                  to="/Login"
                   className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-brightRed hover:bg-brightRedLight active:shadow-lg transition duration-30 ease-in-out"
                 >
                   Login
                 </Link>
                 <p className="mt-6 text-center text-base font-medium text-gray-500">
                   New Student?{' '}
-                  <Link to="/" className="text-brightRed hover:text-brightRedLight">
+                  <Link to="/Registration" className="text-brightRed hover:text-brightRedLight">
                     Register Here
                   </Link>
                 </p>
@@ -359,7 +390,15 @@ export default function Example() {
       </Transition>
     </Popover>
   </div>
-  <Hero/>
+
+    <Routes>
+      <Route path="/" element={<Hero/>}/>
+      <Route path="/Login" element={<Login/>}/>
+      <Route path="/Registration" element={<Registration/>}/>
+      <Route path="/About" element={<About/>}/>
+    </Routes>
+  </Router>
+
   </div>
   )
 }

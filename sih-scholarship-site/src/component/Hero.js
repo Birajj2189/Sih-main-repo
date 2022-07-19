@@ -6,12 +6,14 @@ import {
   ChevronLeftIcon,
   ChevronRightIcon
 } from '@heroicons/react/outline'
+import Updates from './Updates'
 
 
 export class Hero extends Component {
   
   render() {
     return (
+<>
         <section className="hero-section  text-gray-600 body-font">
           <div className="container mx-auto flex px-5 py-8 md:py-12 items-center justify-center flex-col">
             {/* <img className="lg:w-1/2 lg:h-72 md:w-2/3 md:h-60 w-5/6 h-56 mb-6 md:m-10 object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600"/> */}
@@ -109,6 +111,9 @@ export class Hero extends Component {
             </div>
           </div>
         </section>
+        <Updates/>
+
+</>
     )
   }
 }
