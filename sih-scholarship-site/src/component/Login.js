@@ -16,6 +16,7 @@ import {
   TranslateIcon
 } from '@heroicons/react/outline'
 import { ChevronDownIcon } from '@heroicons/react/solid'
+import {Link} from 'react-router-dom';
 
 const recentPosts = [
   { id: 1, name: "Boost your conversion rate", href: "#" },
@@ -266,15 +267,6 @@ export default function Example() {
               Department Login
           </a>
           </Popover.Group>
-
-          <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">  
-            <a
-              href="#"
-              className="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white  bg-brightRed hover:bg-brightRedLight"
-            >
-              Login
-            </a>
-          </div>
         </div>
       </div>
 
@@ -288,7 +280,7 @@ export default function Example() {
         leaveTo="opacity-0 scale-95"
       >
         <Popover.Panel focus className="sm-menu absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
-          <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
+          <div className="rounded-lg z-50 shadow-2xl ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
             <div className="pt-5 pb-6 px-5">
               <div className="flex items-center justify-between">
                 <div  className="flex h-8 w-auto">
@@ -339,20 +331,6 @@ export default function Example() {
                   </a>
                 ))}
               </div>
-              <div>
-                <a
-                  href="#"
-                  className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-brightRed hover:bg-brightRedLight active:shadow-lg transition duration-30 ease-in-out"
-                >
-                  Login
-                </a>
-                <p className="mt-6 text-center text-base font-medium text-gray-500">
-                  New Student?{' '}
-                  <a href="#" className="text-brightRed hover:text-brightRedLight">
-                    Register Here
-                  </a>
-                </p>
-              </div>
             </div>
           </div>
         </Popover.Panel>
@@ -361,7 +339,42 @@ export default function Example() {
   </div>
   
     {/* Login */}
+    <div className="-z-10 login-container">
+    <section className="text-gray-500 body-font ">
+      <div className="container px-5 py-24 mx-auto flex flex-wrap items-center">
+        <div className="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0">
+          <h1 className="title-font font-medium text-3xl text-gray-900">National Scholarship Portal</h1>
+          <p className="leading-relaxed mt-4 text-gray-500">Poke slow-carb mixtape knausgaard, typewriter street art gentrify hammock starladder roathse. Craies vegan tousled etsy austin.</p>
+        </div>
+        <div className="opacity-[0.85] shadow-md lg:w-2/6 md:w-1/2 bg-veryLightGray rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0">
+          <h2 className="text-gray-900 text-lg font-medium title-font mb-5">Login in</h2>
+          <div className="mb-4">
+            <label htmlFor="full-name" className="tracking-wide leading-7 text-sm text-gray-500">Application ID</label>
+            <input type="text" id="full-name" name="full-name" className="w-full bg-white rounded border border-gray-300 focus:border-brightRedLight focus:ring-2 focus:ring-brightRedLight text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
+          </div>
+          <div className="mb-4">
+            <label htmlFor="email" className=" tracking-wide leading-7 text-sm text-gray-500">Password</label>
+            <input type="password" id="email" name="email" className="w-full bg-white rounded border border-gray-300 focus:border-brightRedLight focus:ring-2 focus:ring-brightRedLight text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
+          </div>
+          <div>
+                <Link
+                  to="/"
+                  className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-brightRed hover:bg-brightRedLight active:shadow-lg transition duration-30 ease-in-out"
+                >
+                  Login
+                </Link>
+                <p className="mt-6 text-center text-base font-medium text-gray-500">
+                  New Student?{' '}
+                  <Link to="/" className="text-brightRed hover:text-brightRedLight">
+                    Register Here
+                  </Link>
+                </p>
+              </div>
 
+        </div>
+      </div>
+    </section>
+    </div>
   
 
 

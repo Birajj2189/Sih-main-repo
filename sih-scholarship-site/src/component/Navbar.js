@@ -16,59 +16,61 @@ import {
   TranslateIcon
 } from '@heroicons/react/outline'
 import { ChevronDownIcon } from '@heroicons/react/solid'
+import {Link} from 'react-router-dom';
+
 
 const recentPosts = [
-  { id: 1, name: "Boost your conversion rate", href: "#" },
+  { id: 1, name: "Boost your conversion rate", href: "/" },
   {
     id: 2,
     name: "How to use search engine optimization to drive traffic to your site",
-    href: "#",
+    href: "/",
   },
-  { id: 3, name: "Improve your customer experience", href: "#" },
+  { id: 3, name: "Improve your customer experience", href: "/" },
 ];
 const services = [
   {
     name: 'Analytics',
-    href: '#',
+    href: '/',
   },
   {
     name: 'Engagement',
-    href: '#',
+    href: '/',
   },
   { name: 'Security',
-    href: '#', 
+    href: '/', 
   },
   {
     name: 'Integrations',
-    href: '#',
+    href: '/',
   },
   {
     name: 'Automations',
-    href: '#',
+    href: '/',
   },
 ]
 const callsToAction = [
-  { name: 'Watch Demo', href: '#', icon: PlayIcon },
-  { name: 'Contact Sales', href: '#', icon: PhoneIcon },
+  { name: 'Watch Demo', href: '/', icon: PlayIcon },
+  { name: 'Contact Sales', href: '/', icon: PhoneIcon },
 ]
 const resources = [
   {
     name: 'Help Center',
-    href: '#',
+    href: '/',
     icon: SupportIcon,
   },
   {
     name: 'Guides',
-    href: '#',
+    href: '/',
     icon: BookmarkAltIcon,
   },
   {
     name: 'Events',
-    href: '#',
+    href: '/',
     icon: CalendarIcon,
   },
   { name: 'Security',
-    href: '#',
+    href: '/',
     icon: ShieldCheckIcon },
 ]
 
@@ -83,7 +85,7 @@ export default function Example() {
     <Popover className="relative ">
       <div className="max-w-8xl mx-auto px-4 sm:px-6">
         <div className="hidden justify-start md:flex lg:hidden lg:w-0 lg:flex-1">
-            <a className="flex flex-row justify-center items-center " href="#">
+            <Link className="flex flex-row justify-center items-center " to="/">
               <img
                 className="w-auto rounded-lg md:h-12"
                 src="./ashok-logo.png"
@@ -94,11 +96,11 @@ export default function Example() {
                 <span className="text-gray-500 ">Ministry of Social Work and Empowerment</span>
                 <span className="text-gray-500 ">Government of India</span>
               </div>
-            </a>
+            </Link>
           </div>
         <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:py-2 lg:py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start md:hidden lg:flex lg:w-0 lg:flex-1">
-            <a className="flex flex-row justify-center items-center md:flex-col md:items-start lg:flex-row lg:items-center lg:i" href="#">
+            <Link className="flex flex-row justify-center items-center md:flex-col md:items-start lg:flex-row lg:items-center lg:i" to="/">
               <img
                 className="h-[4rem] w-auto rounded-lg sm:h-20 md:h-10 lg:h-16"
                 src="./ashok-logo.png"
@@ -109,7 +111,7 @@ export default function Example() {
                 <span className="text-gray-500 ">Ministry of Social Work and Empowerment</span>
                 <span className="text-gray-500 ">Government of India</span>
               </div>
-            </a>
+            </Link>
           </div>
           <div className="-mr-2 -my-2 md:hidden md:-mr-0 lg:-mr-2">
             <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brightRedLight active:shadow-lg transition duration-30 ease-in-out">
@@ -118,12 +120,12 @@ export default function Example() {
             </Popover.Button>
           </div>
           <Popover.Group as="nav" className="hidden md:flex space-x-6">
-            <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
+            <Link to="/" className="text-base font-medium text-gray-500 hover:text-gray-900">
               Home
-            </a>
-            <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
+            </Link>
+            <Link to="/" className="text-base font-medium text-gray-500 hover:text-gray-900">
               About us
-            </a>
+            </Link>
 
             <Popover className="relative">
               {({ open }) => (
@@ -157,27 +159,27 @@ export default function Example() {
                       <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                         <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                           {services.map((item) => (
-                            <a
+                            <Link
                               key={item.name}
-                              href={item.href}
+                              to={item.href}
                               className="-m-3 p-3 flex items-start rounded-lg hover:bg-brightRedSupLight"
                             >
                               <div className="ml-4">
                                 <p className="text-base font-medium text-gray-900">{item.name}</p>
                               </div>
-                            </a>
+                            </Link>
                           ))}
                         </div>
                         <div className="px-5 py-5 bg-gray-50 space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
                           {callsToAction.map((item) => (
                             <div key={item.name} className="flow-root">
-                              <a
-                                href={item.href}
+                              <Link
+                                to={item.href}
                                 className="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-100"
                               >
                                 <item.icon className="flex-shrink-0 h-6 w-6 text-brightRed" aria-hidden="true" />
                                 <span className="ml-3">{item.name}</span>
-                              </a>
+                              </Link>
                             </div>
                           ))}
                         </div>
@@ -220,16 +222,16 @@ export default function Example() {
                       <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                         <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                           {resources.map((item) => (
-                            <a
+                            <Link
                               key={item.name}
-                              href={item.href}
+                              to={item.href}
                               className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                             >
                               <item.icon className="flex-shrink-0 h-6 w-6 text-brightRed" aria-hidden="true" />
                               <div className="ml-4">
                                 <p className="text-base font-medium text-gray-900">{item.name}</p>
                               </div>
-                            </a>
+                            </Link>
                           ))}
                         </div>
                         <div className="px-5 py-5 bg-gray-50 sm:px-8 sm:py-8">
@@ -238,18 +240,18 @@ export default function Example() {
                             <ul role="list" className="mt-4 space-y-4">
                               {recentPosts.map((post) => (
                                 <li key={post.id} className="text-base truncate">
-                                  <a href={post.href} className="font-medium text-gray-900 hover:text-gray-700">
+                                  <Link to={post.href} className="font-medium text-gray-900 hover:text-gray-700">
                                     {post.name}
-                                  </a>
+                                  </Link>
                                 </li>
                               ))}
                             </ul>
                           </div>
                           <div className="mt-5 text-sm">
-                            <a href="#" className="font-medium text-brightRed hover:text-brightRedLight">
+                            <Link to="/" className="font-medium text-brightRed hover:text-brightRedLight">
                               {' '}
                               View all posts <span aria-hidden="true">&rarr;</span>
-                            </a>
+                            </Link>
                           </div>
                         </div>
                       </div>
@@ -259,21 +261,19 @@ export default function Example() {
               )}
             </Popover>
 
-          <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
+          <Link to="/" className="text-base font-medium text-gray-500 hover:text-gray-900">
               Institute Login
-          </a>
-          <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
+          </Link>
+          <Link to="/" className="text-base font-medium text-gray-500 hover:text-gray-900">
               Department Login
-          </a>
+          </Link>
           </Popover.Group>
 
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">  
-            <a
-              href="#"
-              className="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white  bg-brightRed hover:bg-brightRedLight"
+            <Link to="/login" className="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white  bg-brightRed hover:bg-brightRedLight"
             >
               Login
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -288,7 +288,7 @@ export default function Example() {
         leaveTo="opacity-0 scale-95"
       >
         <Popover.Panel focus className="sm-menu absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
-          <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
+          <div className="rounded-lg shadow-2xl ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
             <div className="pt-5 pb-6 px-5">
               <div className="flex items-center justify-between">
                 <div  className="flex h-8 w-auto">
@@ -309,48 +309,48 @@ export default function Example() {
               <div className="mt-6">
                 <nav className="grid gap-y-8">
                   {services.map((item) => (
-                    <a
+                    <Link
                       key={item.name}
-                      href={item.href}
+                      to={item.href}
                       className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                     >
                       <span className="ml-3 text-base font-medium text-gray-900">{item.name}</span>
-                    </a>
+                    </Link>
                   ))}
                 </nav>
               </div>
             </div>
             <div className="py-6 px-5 space-y-6 bg-veryPaleRed">
               <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
+                <Link to="/" className="text-base font-medium text-gray-900 hover:text-gray-700">
                   Pricing
-                </a>
+                </Link>
 
-                <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
+                <Link to="/" className="text-base font-medium text-gray-900 hover:text-gray-700">
                   Docs
-                </a>
+                </Link>
                 {resources.map((item) => (
-                  <a
+                  <Link
                     key={item.name}
-                    href={item.href}
+                    to={item.href}
                     className="text-base font-medium text-gray-900 hover:text-gray-700"
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 ))}
               </div>
               <div>
-                <a
-                  href="#"
+                <Link
+                  to="/login"
                   className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-brightRed hover:bg-brightRedLight active:shadow-lg transition duration-30 ease-in-out"
                 >
                   Login
-                </a>
+                </Link>
                 <p className="mt-6 text-center text-base font-medium text-gray-500">
                   New Student?{' '}
-                  <a href="#" className="text-brightRed hover:text-brightRedLight">
+                  <Link to="/" className="text-brightRed hover:text-brightRedLight">
                     Register Here
-                  </a>
+                  </Link>
                 </p>
               </div>
             </div>
