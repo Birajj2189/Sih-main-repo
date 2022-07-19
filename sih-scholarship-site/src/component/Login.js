@@ -359,7 +359,12 @@ export default function Example() {
       </Transition>
     </Popover>
   </div>
-  <Hero/>
+  
+    {/* Login */}
+
+  
+
+
   </div>
   )
 }
