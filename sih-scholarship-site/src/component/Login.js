@@ -86,7 +86,7 @@ export default function Example() {
           <h1 className="title-font font-medium text-3xl text-gray-900">National Scholarship Portal</h1>
           <p className="leading-relaxed mt-4 text-gray-500">Poke slow-carb mixtape knausgaard, typewriter street art gentrify hammock starladder roathse. Craies vegan tousled etsy austin.</p>
         </div>
-        <div className="opacity-[0.85] shadow-md lg:w-2/6 md:w-1/2 bg-veryLightGray rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0">
+        <div className=" shadow-md lg:w-2/6 md:w-1/2 bg-veryLightGray rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0">
           <h2 className="text-gray-900 text-lg font-medium title-font mb-5">Login in</h2>
           <div className="mb-4">
             <label htmlFor="full-name" className="tracking-wide leading-7 text-sm text-gray-500">Application ID</label>

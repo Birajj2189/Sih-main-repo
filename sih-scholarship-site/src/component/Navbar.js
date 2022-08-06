@@ -112,7 +112,7 @@ export default function Example() {
   return (
     <div className="hero-container ">
     <Router>
-    <div className="nav-container">
+    <div className="nav-container z-100">
     <Popover className="relative ">
       <div className="max-w-8xl mx-auto px-4 sm:px-6">
         <div className="hidden justify-start md:flex lg:hidden lg:w-0 lg:flex-1">

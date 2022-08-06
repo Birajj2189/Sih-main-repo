@@ -1,46 +1,12 @@
-import React, { Component } from 'react'
+import React, { useState,Component } from 'react'
 import CentralScheme from './scheme-component/CentralScheme';
 import StateScheme from './scheme-component/StateScheme';
 import UgcScheme from './scheme-component/UgcScheme';
-import Navbar from './Navbar';
 
 
-// React router DOM -----------
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  Navigate,
-} from "react-router-dom";
-import {Link} from 'react-router-dom';
-
-// -----------------------------
-
-
-
-export class Updates extends Component {
+export default function Updates() {
      
-     render() {
-     // let changeTab = (index) => {
-     //      var tabButtons = document.getElementById('tab-buttons').children ;
-     //      var tabPanels = document.getElementById('tab-panels').children;
-
-     //      // Remove the active utility classes from all tabs (bg-white, text-blue-600)
-     //      // And hide all tab content (with the "hidden" utility)
-     //      for (var i = 0; i < tabButtons.length; i++) {
-     //          tabButtons[i].classList.remove('text-blue-600');
-     //          tabButtons[i].classList.remove('bg-white');
-     //          tabButtons[i].classList.add('text-white');
-     //          tabPanels[i].classList.add('hidden');
-     //      }
-
-     //      // Add the active utility classes to the currently active tab (bg-white, text-blue-600)
-     //      // And show the current tab content (remove the "hidden" utility)
-     //      tabButtons[index].classList.remove('text-white');
-     //      tabButtons[index].classList.add('text-blue-600');
-     //      tabButtons[index].classList.add('bg-white');
-     //      tabPanels[index].classList.remove('hidden');
-     // }
+     const [openTab, setOpenTab] = useState(1);
 
     return (
      <>
@@ -51,7 +17,7 @@ export class Updates extends Component {
                {/* Latest Updates Section  */}
                <div className="latest-container my-4 w-full">
                     <div className="heading w-full whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-t-md text-base font-medium text-white  bg-brightRed ">Latest Updates</div>
-                    <div className="latest-box h-60 border-2 border-brightRed rounded-b-md">
+                    <div className="latest-box h-96 border-2 border-brightRed rounded-b-md">
                     </div>
                </div>
 
@@ -66,73 +32,109 @@ export class Updates extends Component {
           </div>
 
           {/* Schemes */}
-
-          {/* <!-- The wrapper of tabs --> */}
-          <div className="drop-shadow-lg">
-          {/* <!-- Tab Buttons --> */}
-               <div id="tab-buttons" className="flex bg-blue-600">
-                    <a href="#" /*onClick={changeTab(0)*/ className="inline-block px-8 py-3 bg-white text-blue-600">Tab
-                         1</a>
-                    <a href="#" /*onClick={changeTab(1)*/ className="inline-block px-8 py-3 text-white">Tab
-                         2</a>
-                    <a href="#" /*onClick={changeTab(2)*/ className="inline-block px-8 py-3 text-white">Tab
-                         3</a>
+          <div className="max-w-100vw md:w-1/2 schemes-container flex flex-wrap">
+          <div className="w-full">
+               <ul className="flex mb-0 list-none flex-wrap pt-3 pb-2 flex-row" role="tablist">
+                    <li className="-mb-px mr-1 flex-auto text-center">
+                         <a
+                         className={
+                         "mb-1 text-font-medium mr-1 px-5 py-3 shadow-lg rounded block leading-normal hover:text-brightRedLight " +
+                         (openTab === 1
+                              ? "text-white bg-brightRed"
+                              : "text-gray-500 bg-white")
+                         }
+                         onClick={e => {
+                         e.preventDefault();
+                         setOpenTab(1);
+                         }}
+                         data-toggle="tab"
+                         href="#link1"
+                         role="tablist"
+                    >
+                         <i className="fas fa-space-shuttle text-base mr-1"></i>Central Scheme
+                         </a>
+                    </li>
+                    <li className="-mb-px mr-1 flex-auto text-center">
+                         <a
+                         className={
+                         "mb-1 text-font-medium px-5 py-3 shadow-lg rounded block leading-normal hover:text-brightRedLight " +
+                         (openTab === 2
+                              ? "text-white bg-brightRed"
+                              : "text-gray-500 bg-white")
+                         }
+                         onClick={e => {
+                         e.preventDefault();
+                         setOpenTab(2);
+                         }}
+                         data-toggle="tab"
+                         href="#link1"
+                         role="tablist"
+                    >
+                         <i className="fas fa-space-shuttle text-base mr-1"></i>UGC / AICTE Scheme
+                         </a>
+                    </li>
+                    <li className="-mb-px mr-1 flex-auto text-center">
+                         <a
+                         className={
+                         "mb-1 text-font-medium px-5 py-3 shadow-lg rounded block leading-normal hover:text-brightRedLight " +
+                         (openTab === 3
+                              ? "text-white bg-brightRed"
+                              : "text-gray-500 bg-white")
+                         }
+                         onClick={e => {
+                         e.preventDefault();
+                         setOpenTab(3);
+                         }}
+                         data-toggle="tab"
+                         href="#link1"
+                         role="tablist"
+                    >
+                         <i className="fas fa-space-shuttle text-base mr-1"></i>State Scheme
+                         </a>
+                    </li>
+                    
+               </ul>
+               <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
+               <div className="px-4 py-5 flex-auto">
+               <div className="tab-content tab-space">
+                    <div className={openTab === 1 ? "block" : "hidden"} id="link1">
+                    <p>
+                         Collaboratively administrate empowered markets via
+                         plug-and-play networks. Dynamically procrastinate B2C users
+                         after installed base benefits.
+                         <br />
+                         <br /> Dramatically visualize customer directed convergence
+                         without revolutionary ROI.
+                    </p>
+                    </div>
+                    <div className={openTab === 2 ? "block" : "hidden"} id="link2">
+                    <p>
+                         Completely synergize resource taxing relationships via
+                         premier niche markets. Professionally cultivate one-to-one
+                         customer service with robust ideas.
+                         <br />
+                         <br />
+                         Dynamically innovate resource-leveling customer service for
+                         state of the art customer service.
+                    </p>
+                    </div>
+                    <div className={openTab === 3 ? "block" : "hidden"} id="link3">
+                    <p>
+                         Efficiently unleash cross-media information without
+                         cross-media value. Quickly maximize timely deliverables for
+                         real-time schemas.
+                         <br />
+                         <br /> Dramatically maintain clicks-and-mortar solutions
+                         without functional solutions.
+                    </p>
+                    </div>
                </div>
-
-        {/* <!-- Tab Panels --> */}
-          <div id="tab-panels" className="bg-white px-8 py-6">
-               <div>
-                    <h1 className="text-2xl">Tab 1 Content</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, doloremque.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, doloremque.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, doloremque.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, doloremque.</p>
                </div>
-
-               <div className="hidden">
-                    <h1 className="text-2xl text-red-500">Tab 2 Content</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, doloremque.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, doloremque.</p>
-               </div>
-
-               <div className="hidden">
-                    <h1 className="text-2xl text-purple-600">Tab 3 Content</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, doloremque.</p>
                </div>
           </div>
+          </div>
 
-
-
-
-
-
-
-
-
-          {/* <div className="schemes-container my-4 w-[90%] md:w-[55%] " >
-               <div className="heading mb-2 text-2xl font-semibold text-gray-500 w-full">
-                    <div className='text-center'>Schemes</div>
-               </div>
-               <div className="scheme-cat flex flex-wrap">
-                    <Link to="/central" className="cursor-pointer whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-t-md shadow-sm text-base font-medium text-white  bg-brightRed hover:bg-brightRedLight active">Central</Link>
-                    <Link to="/ugc" className="cursor-pointer whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-t-md shadow-sm text-base font-medium text-white  bg-brightRed hover:bg-brightRedLight">UGC / AICTE</Link>
-                    <Link to="/state" className="cursor-pointer whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-t-md shadow-sm text-base font-medium text-white  bg-brightRed hover:bg-brightRedLight">State</Link>
-               </div>
-               <div className="schemes-box border-2 border-brightRed rounded-lg p-1 w-full h-auto ">
-                    <Routes>
-                         <Route path="/" element={<Navigate to="/central"/>} />
-                         <Route path="/central" element={<CentralScheme />} />
-                         <Route path="/ugc" element={<UgcScheme />} />
-                         <Route path="/state" element={<StateScheme />} />
-                    </Routes>
-
-               
-               </div>*/}
-          </div> 
       </div>
      </>
-    )
-  }
+    );
 }
-
-export default Updates;

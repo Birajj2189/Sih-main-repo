@@ -1,20 +1,13 @@
 import './App.css';
 import Navbar from './component/Navbar';
 import Footer from './component/Footer';
-import Login from './component/Login';
-import Updates from './component/Updates';
-import Registration from './component/Registration';
-
-// React router DOM -----------
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-} from "react-router-dom";
+import React, { useState } from 'react'
 
 function App() {
+
   return (
     <>
+  
       <Navbar/>
 
         {/* <Route path='/registration' element={<Registration/>}/> */}
