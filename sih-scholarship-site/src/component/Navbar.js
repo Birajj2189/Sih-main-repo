@@ -3,10 +3,28 @@ import { Fragment } from 'react'
 import Hero from './Hero';
 import React from 'react'
 import Registration from './Registration';
+import ContactUs from './ContactUs';
+import HelpDesk from './HelpDesk';
+
+// Loign imports --
 import Login from './Login';
+import FreshLogin from './FreshLogin';
+import RenewalLogin from './RenewalLogin';
+import InstituteLogin from './InstituteLogin'
+import OfficerLogin from './OfficerLogin';
+
+// Footer imports --
+import Copyright from './Copyright';
+import Privacy from './Privacy';
+import Disclaimer from './Disclaimer';
+import Terms from './Terms';
+import Hyperlink from './Hyperlink';
+import SiteMap from './SiteMap';
+// ----------------
 
 import { Popover, Transition } from '@headlessui/react'
 import {
+  MailIcon,
   BookmarkAltIcon,
   CalendarIcon,
   MenuIcon,
@@ -27,7 +45,7 @@ import {
 } from "react-router-dom";
 import {Link} from 'react-router-dom';
 import About from './About';
-
+import Dashboard from './Dashboard';
 
 
 
@@ -43,24 +61,16 @@ const recentPosts = [
 ];
 const services = [
   {
-    name: 'Analytics',
-    href: '/',
+    name: 'New Registration',
+    href: '/Registration',
   },
   {
-    name: 'Engagement',
-    href: '/',
+    name: 'Fresh Application',
+    href: '/fresh/Login',
   },
-  { name: 'Security',
-    href: '/', 
-  },
-  {
-    name: 'Integrations',
-    href: '/',
-  },
-  {
-    name: 'Automations',
-    href: '/',
-  },
+  { name: 'Renewal Application',
+    href: '/renewal/Login', 
+  }
 ]
 const NavMenu = [
   {
@@ -72,7 +82,7 @@ const NavMenu = [
     href: '/About',
   },
   { name: 'Institute Login',
-    href: '/', 
+    href: '/About', 
   },
   {
     name: 'Department Login',
@@ -81,12 +91,12 @@ const NavMenu = [
 ]
 const callsToAction = [
   { name: 'Watch Demo', href: '/', icon: PlayIcon },
-  { name: 'Contact Sales', href: '/', icon: PhoneIcon },
+  { name: 'Contact Us', href: '/ContactUs', icon: MailIcon },
 ]
 const resources = [
   {
-    name: 'Help Center',
-    href: '/',
+    name: 'Help Desk',
+    href: '/HelpDesk',
     icon: SupportIcon,
   },
   {
@@ -292,11 +302,11 @@ export default function Example() {
               )}
             </Popover>
 
-          <Link to="/" className="text-base font-medium text-gray-500 hover:text-gray-900">
+          <Link to="/InstituteLogin" className="text-base font-medium text-gray-500 hover:text-gray-900">
               Institute Login
           </Link>
-          <Link to="/" className="text-base font-medium text-gray-500 hover:text-gray-900">
-              Department Login
+          <Link to="/OfficerLogin" className="text-base font-medium text-gray-500 hover:text-gray-900">
+              Officer Login
           </Link>
           </Popover.Group>
 
@@ -391,11 +401,31 @@ export default function Example() {
     </Popover>
   </div>
 
+
+{/* ---------- Routes -------------- */}
     <Routes>
       <Route path="/" element={<Hero/>}/>
-      <Route path="/Login" element={<Login/>}/>
       <Route path="/Registration" element={<Registration/>}/>
       <Route path="/About" element={<About/>}/>
+      <Route path="/ContactUs" element={<ContactUs/>}/>
+      <Route path="/HelpDesk" element={<HelpDesk/>}/>
+      <Route path="/DashBoard" element={<Dashboard/>}/>
+
+      {/* Login Routes */}
+      <Route path="/Login" element={<Login/>}/>
+      <Route path="/fresh/Login" element={<FreshLogin/>}/>
+      <Route path="/renewal/Login" element={<RenewalLogin/>}/>
+      <Route path="/InstituteLogin" element={<InstituteLogin/>}/>
+      <Route path="/OfficerLogin" element={<OfficerLogin/>}/>
+
+
+      {/* Footer Routes */}
+      <Route path="/Terms" element={<Terms/>}/>
+      <Route path="/Privacy" element={<Privacy/>}/>
+      <Route path="/Disclaimer" element={<Disclaimer/>}/>
+      <Route path="/Copyright" element={<Copyright/>}/>
+      <Route path="/Hyperlink" element={<Hyperlink/>}/>
+      <Route path="/SiteMap" element={<SiteMap/>}/>
     </Routes>
   </Router>
 

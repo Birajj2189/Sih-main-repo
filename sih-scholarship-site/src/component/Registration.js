@@ -2,19 +2,15 @@ import React, { Component } from 'react'
 
 import {Link} from 'react-router-dom';
 
-import {
-     CalendarIcon
-   } from '@heroicons/react/outline'
-   
 
 export class Registration extends Component {
   render() {
     return (
-<div className='registration-container max-w-[100vw] px-5 py-24 mx-auto flex flex-wrap items-center body-font'>
-     <h1 className='text-2xl w-full text-center text-gray-500 my-6'>Student Registration form</h1>
+<div className='registration-container max-w-[100vw] px-6 py-24 mx-auto flex flex-wrap items-center body-font'>
      <div className="flex justify-center items-center form-container w-full">
           <form className="w-full md:w-3/4 lg:w-1/2 bg-transparent " action="#" method="POST">
                <div className="shadow overflow-hidden sm:rounded-md">
+               <h1 className='bg-white text-2xl w-full text-center text-gray-500 py-6 rounded'>Student Registration form</h1>
                <div className="px-4 py-5 bg-white sm:p-6">
                <div className="grid grid-cols-6 gap-6">
                <div className="col-span-6 sm:col-span-3">

@@ -20,22 +20,22 @@ export class Footer extends Component {
                     <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">POLICIES</h2>
                     <nav className="list-none mb-10">
                          <li>
-                         <a className="text-gray-600 hover:text-gray-800">Copyright Policy</a>
+                         <a href="/Copyright" className="text-gray-600 hover:text-gray-800 cursor-pointer">Copyright Policy</a>
                          </li>
                          <li>
-                         <a className="text-gray-600 hover:text-gray-800">Privacy Policy</a>
+                         <a href="/Privacy" className="text-gray-600 hover:text-gray-800 cursor-pointer">Privacy Policy</a>
                          </li>
                          <li>
-                         <a className="text-gray-600 hover:text-gray-800">Terms and condition</a>
+                         <a href="/Terms" className="text-gray-600 hover:text-gray-800 cursor-pointer">Terms and condition</a>
                          </li>
                          <li>
-                         <a className="text-gray-600 hover:text-gray-800">Site Map</a>
+                         <a href="/Disclaimer" className="text-gray-600 hover:text-gray-800 cursor-pointer">Disclaimer</a>
                          </li>
                          <li>
-                         <a className="text-gray-600 hover:text-gray-800">Disclaimer</a>
+                         <a href="/Hyperlink" className="text-gray-600 hover:text-gray-800 cursor-pointer">Hyperlinking Policy</a>
                          </li>
                          <li>
-                         <a className="text-gray-600 hover:text-gray-800">Hyperlinking Policy</a>
+                         <a href="/SiteMap" className="text-gray-600 hover:text-gray-800 cursor-pointer">Site Map</a>
                          </li>
                     </nav>
                     </div>
@@ -43,8 +43,8 @@ export class Footer extends Component {
                </div>    
                <div className="bg-veryDarkBlue ">
                <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-                    <p className="text-gray-500 text-sm text-center sm:text-left">© Copyright 2022 —
-                    <a href="#" rel="noopener noreferrer" className="text-gray-600 ml-1" target="_blank">National Scholarship Portal</a>
+                    <p className="text-gray-500 text-sm text-center sm:text-left">This site is developed by students of Assam University <br/> © Copyright 2022 —
+                    <a href="#" rel="noopener noreferrer" className="text-gray-600 ml-1" target="">National Scholarship Portal</a>
                     </p>
                     <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
                     <a className="text-gray-500 cursor-pointer" target=" " href='https://www.facebook.com/ministryofsocial.justice.and.empowerment1'>
