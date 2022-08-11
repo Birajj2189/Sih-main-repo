@@ -105,7 +105,7 @@ export class Hero extends Component {
               <p className="mb-2 leading-relaxed text-lg">(Ministry of Information and Technology)</p>
               <p className='mb-12'><strong className="leading-relaxed text-lg">(For the Academic Year 2022-23)</strong></p>
               <div className="flex justify-center flex-wrap">
-                <a href="/Registration" className="inline-flex text-white bg-brightRed border-0 py-2 px-6 focus:outline-none active:bg-brightRedLight rounded text-lg mx-2 my-1 md:my-0 hover:shadow-lg transition duration-30 ease-in-out"><UserIcon className="h-6 w-6 mx-1" aria-hidden="true" />New Registration</a>
+                <a href="/RegistrationInstruction" className="inline-flex text-white bg-brightRed border-0 py-2 px-6 focus:outline-none active:bg-brightRedLight rounded text-lg mx-2 my-1 md:my-0 hover:shadow-lg transition duration-30 ease-in-out"><UserIcon className="h-6 w-6 mx-1" aria-hidden="true" />New Registration</a>
                 <a href="/fresh/Login" className="inline-flex text-white bg-brightRed border-0 py-2 px-6 focus:outline-none active:bg-brightRedLight rounded text-lg mx-2 my-1 md:my-0 hover:shadow-lg transition duration-30 ease-in-out"><UsersIcon className="h-6 w-6 mx-1" aria-hidden="true" />Apply Fresh</a>
                 <a href="/renewal/Login" className="inline-flex text-white bg-brightRed border-0 py-2 px-6 focus:outline-none active:bg-brightRedLight rounded text-lg mx-2 my-1 md:my-0 hover:shadow-lg transition duration-30 ease-in-out"><UserCircleIcon className="h-6 w-6 mx-1" aria-hidden="true" />Apply Renewal</a>
               </div>

@@ -40,7 +40,7 @@ export default function Example() {
                 </Link>
                 <p className="mt-4 text-center text-base font-medium text-gray-500">
                   New Student?{' '}
-                  <Link to="/Registration" className="text-brightRed hover:text-brightRedLight">
+                  <Link to="/RegistrationInstruction" className="text-brightRed hover:text-brightRedLight">
                     Register Here
                   </Link>
                 </p>

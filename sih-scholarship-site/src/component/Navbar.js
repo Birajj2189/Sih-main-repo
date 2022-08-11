@@ -6,14 +6,19 @@ import Registration from './Registration';
 import ContactUs from './ContactUs';
 import HelpDesk from './HelpDesk';
 
+import Faq from './Faq';
+
 // Loign imports --
+
 import Login from './Login';
 import FreshLogin from './FreshLogin';
 import RenewalLogin from './RenewalLogin';
 import InstituteLogin from './InstituteLogin'
 import OfficerLogin from './OfficerLogin';
+import RegistrationInstruction from './RegistrationInstruction';
 
 // Footer imports --
+import Footer from './Footer';
 import Copyright from './Copyright';
 import Privacy from './Privacy';
 import Disclaimer from './Disclaimer';
@@ -24,16 +29,15 @@ import SiteMap from './SiteMap';
 
 import { Popover, Transition } from '@headlessui/react'
 import {
+  QuestionMarkCircleIcon,
   MailIcon,
   BookmarkAltIcon,
-  CalendarIcon,
   MenuIcon,
   PhoneIcon,
   PlayIcon,
   ShieldCheckIcon,
   SupportIcon,
   XIcon,
-  TranslateIcon
 } from '@heroicons/react/outline'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 
@@ -62,7 +66,7 @@ const recentPosts = [
 const services = [
   {
     name: 'New Registration',
-    href: '/Registration',
+    href: '/RegistrationInstruction',
   },
   {
     name: 'Fresh Application',
@@ -70,6 +74,9 @@ const services = [
   },
   { name: 'Renewal Application',
     href: '/renewal/Login', 
+  },
+  { name: 'Student DashBoard',
+    href: '/About', 
   }
 ]
 const NavMenu = [
@@ -105,9 +112,9 @@ const resources = [
     icon: BookmarkAltIcon,
   },
   {
-    name: 'Events',
-    href: '/',
-    icon: CalendarIcon,
+    name: 'FAQs',
+    href: '/Faq',
+    icon: QuestionMarkCircleIcon,
   },
   { name: 'Security',
     href: '/',
@@ -121,7 +128,7 @@ function classNames(...classes) {
 export default function Example() {
   return (
     <div className="hero-container ">
-    <Router>
+    {/* <Router> */}
     <div className="nav-container z-100">
     <Popover className="relative ">
       <div className="max-w-8xl mx-auto px-4 sm:px-6">
@@ -389,7 +396,7 @@ export default function Example() {
                 </Link>
                 <p className="mt-6 text-center text-base font-medium text-gray-500">
                   New Student?{' '}
-                  <Link to="/Registration" className="text-brightRed hover:text-brightRedLight">
+                  <Link to="/RegistrationInstruction" className="text-brightRed hover:text-brightRedLight">
                     Register Here
                   </Link>
                 </p>
@@ -416,7 +423,10 @@ export default function Example() {
       <Route path="/fresh/Login" element={<FreshLogin/>}/>
       <Route path="/renewal/Login" element={<RenewalLogin/>}/>
       <Route path="/InstituteLogin" element={<InstituteLogin/>}/>
-      <Route path="/OfficerLogin" element={<OfficerLogin/>}/>
+      <Route path="/OfficerLogin" element={<OfficerLogin/>}/>  
+
+      <Route path="/Faq" element={<Faq/>}/>  
+      <Route path="/RegistrationInstruction" element={<RegistrationInstruction/>}/>  
 
 
       {/* Footer Routes */}
@@ -427,7 +437,9 @@ export default function Example() {
       <Route path="/Hyperlink" element={<Hyperlink/>}/>
       <Route path="/SiteMap" element={<SiteMap/>}/>
     </Routes>
-  </Router>
+  {/* </Router> */}
+
+    <Footer/>
 
   </div>
   )

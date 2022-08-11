@@ -1,20 +1,20 @@
 import './App.css';
 import Navbar from './component/Navbar';
-import Footer from './component/Footer';
 import React, { useState } from 'react'
-
+import Dashboard from './component/Dashboard';
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+} from "react-router-dom";
+import About from './component/About';
 function App() {
 
   return (
     <>
-  
-      <Navbar/>
-
-        {/* <Route path='/registration' element={<Registration/>}/> */}
-        
-        {/* <Route path='/login' element={<Login/>}/> */}
-      {/* <Updates/> */}
-      <Footer/>
+    <Router>
+        <Navbar/>
+    </Router>
     </>
   );
 }

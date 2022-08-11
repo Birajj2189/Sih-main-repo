@@ -405,7 +405,7 @@ export default function Updates() {
                <div className="latest-container my-4 w-full">
                     <div className="heading w-full whitespace-nowrap inline-flex items-center justify-center px-4 py-2 shadow-lg border border-transparent rounded-t-md text-base font-medium text-white  bg-brightRed ">Notice Board - For Institutes</div>
                     <div className="latest-box h-64 bg-white shadow-lg border-2  rounded-b-md">
-                         <marquee className="m-4 h-[80%]" behavior="scroll" onmouseover="this.stop()" onmouseout="this.start()" scrollamount="3" direction="up" loop="infinite" >
+                         <marquee className="m-4 h-[80%]" behavior="scroll" onMouseOver="this.stop()" onMouseOut="this.start()" scrollamount="3" direction="up" loop="infinite" >
                               <ul className='notificationlist list-unstyled text-justify '>
                                    {studentNotification.map((items) => ( 
                                         <li className="rounded-md border-[2px] shadow-sm border-gray-100 p-2 mt-1 mb-1 "><i class="fa-solid fa-circle-info"></i>{items.description}</li>
