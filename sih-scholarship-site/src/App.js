@@ -1,19 +1,23 @@
 import './App.css';
 import Navbar from './component/Navbar';
 import React, { useState } from 'react'
-import Dashboard from './component/Dashboard';
+
 import {
   BrowserRouter as Router,
   Route,
   Routes,
 } from "react-router-dom";
-import About from './component/About';
+import Navbar2 from './component/Navbar2';
+
 function App() {
 
   return (
     <>
     <Router>
-        <Navbar/>
+      <Routes>
+        <Route path="/*" element={<Navbar/>}/>
+        <Route path="/scholarships/*" element={<Navbar2/>}/>
+      </Routes>
     </Router>
     </>
   );

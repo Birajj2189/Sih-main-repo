@@ -68,10 +68,6 @@ const services = [
     name: 'New Registration',
     href: '/RegistrationInstruction',
   },
-  {
-    name: 'Fresh Application',
-    href: '/fresh/Login',
-  },
   { name: 'Renewal Application',
     href: '/renewal/Login', 
   },
@@ -127,7 +123,7 @@ function classNames(...classes) {
 
 export default function Example() {
   return (
-    <div className="hero-container ">
+    <div className="main-container ">
     {/* <Router> */}
     <div className="nav-container z-100">
     <Popover className="relative ">
@@ -439,7 +435,7 @@ export default function Example() {
     </Routes>
   {/* </Router> */}
 
-    <Footer/>
+     <Footer/>
 
   </div>
   )

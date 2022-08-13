@@ -33,7 +33,7 @@ export default function Example() {
                     </Link>
                   </p>
                 <Link
-                  to="/"
+                  to="/scholarships"
                   className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-brightRed hover:bg-brightRedLight active:shadow-lg transition duration-30 ease-in-out"
                 >
                   Login
