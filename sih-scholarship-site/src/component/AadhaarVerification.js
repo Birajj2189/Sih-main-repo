@@ -2,6 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom';
 
 export default function AadhaarVerification() {
+
   return (
 <div className='registration-container max-w-[100vw] px-6 py-24 mx-auto flex flex-wrap items-center body-font'>
     
@@ -84,7 +85,10 @@ export default function AadhaarVerification() {
                </div>
                </div>
                     <div className="px-4 py-3 bg-veryPaleRed text-right sm:px-6">
-                    <Link to="/scholarships/Student-Qualification" className="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white  bg-brightRed hover:bg-brightRedLight"
+                    <Link onClick={() => {
+                        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+                      }}
+                      to="/scholarships/Student-Qualification" className="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white  bg-brightRed hover:bg-brightRedLight"
                     >
                     Next
                     </Link>

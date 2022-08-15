@@ -13,7 +13,6 @@ import Faq from './Faq';
 import Login from './Login';
 import FreshLogin from './FreshLogin';
 import RenewalLogin from './RenewalLogin';
-import InstituteLogin from './InstituteLogin'
 import OfficerLogin from './OfficerLogin';
 import RegistrationInstruction from './RegistrationInstruction';
 
@@ -83,9 +82,6 @@ const NavMenu = [
   {
     name: 'About Us',
     href: '/About',
-  },
-  { name: 'Institute Login',
-    href: '/About', 
   },
   {
     name: 'Department Login',
@@ -304,10 +300,6 @@ export default function Example() {
                 </>
               )}
             </Popover>
-
-          <Link to="/InstituteLogin" className="text-base font-medium text-gray-500 hover:text-gray-900">
-              Institute Login
-          </Link>
           <Link to="/OfficerLogin" className="text-base font-medium text-gray-500 hover:text-gray-900">
               Officer Login
           </Link>
@@ -331,7 +323,7 @@ export default function Example() {
         leaveFrom="opacity-100 scale-100"
         leaveTo="opacity-0 scale-95"
       >
-        <Popover.Panel focus className="sm-menu absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+        <Popover.Panel focus className="sm-menu absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
           <div className="rounded-lg shadow-2xl ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
             <div className="pt-5 pb-6 px-5">
               <div className="flex items-center justify-between">
@@ -418,7 +410,6 @@ export default function Example() {
       <Route path="/Login" element={<Login/>}/>
       <Route path="/fresh/Login" element={<FreshLogin/>}/>
       <Route path="/renewal/Login" element={<RenewalLogin/>}/>
-      <Route path="/InstituteLogin" element={<InstituteLogin/>}/>
       <Route path="/OfficerLogin" element={<OfficerLogin/>}/>  
 
       <Route path="/Faq" element={<Faq/>}/>  

@@ -8,6 +8,7 @@ import {
   Routes,
 } from "react-router-dom";
 import Navbar2 from './component/Navbar2';
+import Dashboard from './component/Dashboard';
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         <Route path="/*" element={<Navbar/>}/>
         <Route path="/scholarships/*" element={<Navbar2/>}/>
+        <Route path="/Student-Dashboard/*" element={<Dashboard/>}/>
       </Routes>
     </Router>
     </>

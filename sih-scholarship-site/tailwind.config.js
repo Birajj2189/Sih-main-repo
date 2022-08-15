@@ -4,8 +4,7 @@ const { hasSelectionSupport } = require('@testing-library/user-event/dist/utils'
 module.exports = {
   content: [
     "./src/**/*.{html,js}",
-    'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}'
-  ],
+    ],
   theme: {
     extend: {
       colors : {

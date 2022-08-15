@@ -3,12 +3,13 @@ import {Link} from 'react-router-dom';
 
 import Hero2 from './Hero2';
 import Footer from './Footer'
-import Dashboard from './Dashboard';
 
 import AadhaarVerification from './AadhaarVerification';
 import StudentQualification from './StudentQualification';
 import FamilyIncome from './FamilyIncome';
 
+import ItrVerification from './ItrVerification';
+import DomicileVerification from './DomicileVerification';
 
 import {
   BrowserRouter as Router,
@@ -20,8 +21,6 @@ import{
   UserCircleIcon,
   LogoutIcon
 } from '@heroicons/react/outline'
-import ItrVerification from './ItrVerification';
-import DomicileVerification from './DomicileVerification';
 
 
 export default function Navbar2 () {
@@ -46,7 +45,7 @@ export default function Navbar2 () {
       <LogoutIcon className=" ml-1 h-5 font-bold w-5" aria-hidden="true"/>
       </Link></button>
       <div className='flex justify-center items-center ml-2'>
-      <Link className="" to="Dashboard"><UserCircleIcon className='cursor-pointer h-12 w-12 font-bold text-brightRedLight'/></Link>
+      <Link className="" to="/Student-Dashboard"><UserCircleIcon className='cursor-pointer h-12 w-12 font-bold text-brightRedLight'/></Link>
       </div>  
 
     </div>
@@ -54,7 +53,6 @@ export default function Navbar2 () {
 
       <Routes>
         <Route path="/" element={<Hero2/>}/>
-        <Route path="Dashboard" element={<Dashboard/>}/>
         <Route path="Aadhaar-Verification" element={<AadhaarVerification/>}/>
         <Route path="Student-Qualification" element={<StudentQualification/>}/>
         <Route path="Family-income" element={<FamilyIncome/>}/>

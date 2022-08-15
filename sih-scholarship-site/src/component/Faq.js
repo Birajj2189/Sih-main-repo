@@ -43,6 +43,7 @@ export default class Faq extends Component {
                 <button class="
                   accordion-button
                   collapsed
+                  -z-2
                   relative
                   flex
                   items-center
