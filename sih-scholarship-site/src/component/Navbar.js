@@ -1,4 +1,5 @@
 /* This example requires Tailwind CSS v2.0+ */
+import {Link} from 'react-router-dom';
 import { Fragment } from 'react'
 import Hero from './Hero';
 import React from 'react'
@@ -9,12 +10,14 @@ import HelpDesk from './HelpDesk';
 import Faq from './Faq';
 
 // Loign imports --
-
+import IdRecovery from './IdRecovery';
 import Login from './Login';
-import FreshLogin from './FreshLogin';
 import RenewalLogin from './RenewalLogin';
 import OfficerLogin from './OfficerLogin';
 import RegistrationInstruction from './RegistrationInstruction';
+import StudForgotPass from './StudForgotPass';
+import StudOtpRec from './StudOtpRec';
+import StudentResetPass from './StudentResetPass';
 
 // Footer imports --
 import Footer from './Footer';
@@ -46,7 +49,6 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
-import {Link} from 'react-router-dom';
 import About from './About';
 import Dashboard from './Dashboard';
 
@@ -408,9 +410,12 @@ export default function Example() {
 
       {/* Login Routes */}
       <Route path="/Login" element={<Login/>}/>
-      <Route path="/fresh/Login" element={<FreshLogin/>}/>
       <Route path="/renewal/Login" element={<RenewalLogin/>}/>
       <Route path="/OfficerLogin" element={<OfficerLogin/>}/>  
+      <Route path="/Id-Recovery" element={<IdRecovery/>}/>  
+      <Route path="/StudForgotPass" element={<StudForgotPass/>}/>  
+      <Route path="/StudentOtpRec" element={<StudOtpRec/>}/>  
+      <Route path="/StudentResetPass" element={<StudentResetPass/>}/>  
 
       <Route path="/Faq" element={<Faq/>}/>  
       <Route path="/RegistrationInstruction" element={<RegistrationInstruction/>}/>  

@@ -18,7 +18,7 @@ export class Hero extends Component {
       
       
           <div className="mb-6 md:mb-10 z-0">
-          <div id="carouselExampleCaptions" className="carousel slide carousel-fade " data-bs-ride="carousel">
+          <div id="carouselExampleCaptions " className="h-96 carousel slide carousel-fade " data-bs-ride="carousel">
             <div
               className="carousel-indicators  right-0 bottom-0 left-0 flex justify-center p-0 mb-4"
             >
@@ -48,7 +48,7 @@ export class Hero extends Component {
                 <video className="w-full" autoPlay loop muted>
                   <source src="https://mdbcdn.b-cdn.net/img/video/Tropical.mp4" type="video/mp4" />
                 </video>
-                <div className="carousel-caption hidden md:block  text-center">
+                <div className="carousel-caption hidden md:block text-center">
                   <h5 className="text-xl">First slide label</h5>
                   <p>Some representative placeholder content for the first slide.</p>
                 </div>
@@ -106,7 +106,7 @@ export class Hero extends Component {
               <p className='mb-12'><strong className="leading-relaxed text-lg">(For the Academic Year 2022-23)</strong></p>
               <div className="flex justify-center flex-wrap">
                 <a href="/RegistrationInstruction" className="inline-flex text-white bg-brightRed border-0 py-2 px-6 focus:outline-none active:bg-brightRedLight rounded text-lg mx-2 my-1 md:my-0 hover:shadow-lg transition duration-30 ease-in-out"><UserIcon className="h-6 w-6 mx-1" aria-hidden="true" />New Registration</a>
-                <a href="/fresh/Login" className="inline-flex text-white bg-brightRed border-0 py-2 px-6 focus:outline-none active:bg-brightRedLight rounded text-lg mx-2 my-1 md:my-0 hover:shadow-lg transition duration-30 ease-in-out"><UsersIcon className="h-6 w-6 mx-1" aria-hidden="true" />Apply Fresh</a>
+                <a href="/Login" className="inline-flex text-white bg-brightRed border-0 py-2 px-6 focus:outline-none active:bg-brightRedLight rounded text-lg mx-2 my-1 md:my-0 hover:shadow-lg transition duration-30 ease-in-out"><UsersIcon className="h-6 w-6 mx-1" aria-hidden="true" />Apply Fresh</a>
                 <a href="/renewal/Login" className="inline-flex text-white bg-brightRed border-0 py-2 px-6 focus:outline-none active:bg-brightRedLight rounded text-lg mx-2 my-1 md:my-0 hover:shadow-lg transition duration-30 ease-in-out"><UserCircleIcon className="h-6 w-6 mx-1" aria-hidden="true" />Apply Renewal</a>
               </div>
             </div>

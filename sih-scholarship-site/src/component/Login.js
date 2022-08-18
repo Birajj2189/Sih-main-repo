@@ -23,12 +23,12 @@ export default function Example() {
           </div>
           <div >
                   <p className="mb-2  text-base font-medium text-gray-500">
-                    <Link to="/Registration" className="text-brightRed hover:text-brightRedLight">
+                    <Link to="/StudForgotPass" className="text-brightRed hover:text-brightRedLight">
                       Forgot Password ?
                     </Link>
                   </p>
                   <p className="mb-4 text-base font-medium text-gray-500">
-                    <Link to="/Registration" className="text-brightRed hover:text-brightRedLight">
+                    <Link to="/Id-Recovery" className="text-brightRed hover:text-brightRedLight">
                       Forgot Application Id ?
                     </Link>
                   </p>
