@@ -18,7 +18,7 @@ export class Hero extends Component {
       
       
           <div className="mb-6 md:mb-10 z-0">
-          <div id="carouselExampleCaptions " className="h-96 carousel slide carousel-fade " data-bs-ride="carousel">
+          <div id="carouselExampleCaptions " className="carousel slide carousel-fade " data-bs-ride="carousel">
             <div
               className="carousel-indicators  right-0 bottom-0 left-0 flex justify-center p-0 mb-4"
             >
