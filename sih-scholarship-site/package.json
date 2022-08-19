@@ -9,9 +9,7 @@
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
     "chartjs-adapter-moment": "^1.0.0",
-    "daisyui": "^2.22.0",
     "flatpickr": "^4.6.13",
-    "flowbite-react": "^0.1.5",
     "react": "^18.2.0",
     "react-datepicker": "^4.8.0",
     "react-dom": "^18.2.0",
@@ -21,13 +19,17 @@
     "react-scripts": "5.0.1",
     "react-top-loading-bar": "^2.1.0",
     "react-transition-group": "^4.4.5",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "engines":{
+    "node":"v16.15.0"
+    "npm":"8.5.5",
   },
   "eslintConfig": {
     "extends": [
