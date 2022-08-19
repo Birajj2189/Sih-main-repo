@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
+import ReCAPTCHA from "react-google-recaptcha";
 
 export default function StudForgotPass() {
   return (
@@ -20,7 +21,7 @@ export default function StudForgotPass() {
              <label htmlFor="full-name" className="tracking-wide leading-7 text-sm text-gray-500">Enter Registered Mobile No / Email Address</label>
              <input type="text" id="full-name" name="full-name" className="w-full bg-white rounded border border-gray-300 focus:border-brightRedLight focus:ring-2 focus:ring-brightRedLight text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
            </div>
-           <div className=" mb-4 g-recaptcha" data-sitekey="6LcugowhAAAAAEVd2_aWRi54QqrAGMdVgOCIIa7_"></div>
+           <div class="g-recaptcha" data-sitekey="6Lckro0hAAAAABdm-0IYRBdSNuWWZghPlZBoDfsz"></div>
            <div >
                  <Link
                    to="/StudentOtpRec"

@@ -1,8 +1,16 @@
 /* This example requires Tailwind CSS v2.0+ */
 import React from 'react'
 import {Link} from 'react-router-dom';
+import reCAPTCHA from 'react-google-recaptcha'
+
+const recaptchaRef = React.createRef();
 
 export default function Example() {
+  const onSubmit = () => {
+    const recaptchaValue = recaptchaRef.current.getValue();
+    this.props.onSubmit(recaptchaValue);
+  }
+
   return (  
     <div className="-z-10 login-container">
     <section className="text-gray-500 body-font ">
@@ -13,6 +21,7 @@ export default function Example() {
         </div>
         <div className=" shadow-md lg:w-2/6 md:w-1/2 bg-veryLightGray rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0">
           <h2 className="text-gray-900 text-2xl font-medium title-font mb-5">Login </h2>
+          <form>
           <div className="mb-4">
             <label htmlFor="full-name" className="tracking-wide leading-7 text-sm text-gray-500">Application ID</label>
             <input type="text" id="full-name" name="full-name" className="w-full bg-white rounded border border-gray-300 focus:border-brightRedLight focus:ring-2 focus:ring-brightRedLight text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
@@ -21,8 +30,8 @@ export default function Example() {
             <label htmlFor="email" className=" tracking-wide leading-7 text-sm text-gray-500">Password</label>
             <input type="password" id="email" name="email" className="w-full bg-white rounded border border-gray-300 focus:border-brightRedLight focus:ring-2 focus:ring-brightRedLight text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
           </div>
-          <div className="mb-4 g-recaptcha" data-sitekey="6LcugowhAAAAAEVd2_aWRi54QqrAGMdVgOCIIa7_"></div>
-          <div >
+                <div class="g-recaptcha" data-sitekey="6Lckro0hAAAAABdm-0IYRBdSNuWWZghPlZBoDfsz"></div>
+                <div>
                   <p className="mb-2  text-base font-medium text-gray-500">
                     <Link to="/StudForgotPass" className="text-brightRed hover:text-brightRedLight">
                       Forgot Password ?
@@ -33,12 +42,12 @@ export default function Example() {
                       Forgot Application Id ?
                     </Link>
                   </p>
-                <Link
+                <button className='w-full'><Link
                   to="/scholarships"
                   className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-brightRed hover:bg-brightRedLight active:shadow-lg transition duration-30 ease-in-out"
                 >
                   Login
-                </Link>
+                </Link></button>          
                 <p className="mt-4 text-center text-base font-medium text-gray-500">
                   New Student?{' '}
                   <Link to="/RegistrationInstruction" className="text-brightRed hover:text-brightRedLight">
@@ -46,6 +55,7 @@ export default function Example() {
                   </Link>
                 </p>
             </div>
+          </form>
 
         </div>
       </div>
