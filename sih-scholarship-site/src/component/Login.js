@@ -23,14 +23,14 @@ export default function Example() {
           <h2 className="text-gray-900 text-2xl font-medium title-font mb-5">Login </h2>
           <form>
           <div className="mb-4">
-            <label htmlFor="full-name" className="tracking-wide leading-7 text-sm text-gray-500">Application ID</label>
-            <input type="text" id="full-name" name="full-name" className="w-full bg-white rounded border border-gray-300 focus:border-brightRedLight focus:ring-2 focus:ring-brightRedLight text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
+            <label htmlFor="full-name" className="tracking-wide leading-7 text-sm text-gray-500" >Application ID</label>
+            <input type="text" id="full-name" name="full-name" aria-required className="w-full bg-white rounded border border-gray-300 focus:border-brightRedLight focus:ring-2 focus:ring-brightRedLight text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
           </div>
           <div className="mb-4">
-            <label htmlFor="email" className=" tracking-wide leading-7 text-sm text-gray-500">Password</label>
-            <input type="password" id="email" name="email" className="w-full bg-white rounded border border-gray-300 focus:border-brightRedLight focus:ring-2 focus:ring-brightRedLight text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
+            <label htmlFor="email" className=" tracking-wide leading-7 text-sm text-gray-500" aria-required>Password</label>
+            <input type="password" id="email" name="email" aria-required className="w-full bg-white rounded border border-gray-300 focus:border-brightRedLight focus:ring-2 focus:ring-brightRedLight text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
           </div>
-                <div class="g-recaptcha" data-sitekey="6Lckro0hAAAAABdm-0IYRBdSNuWWZghPlZBoDfsz"></div>
+                <div class="g-recaptcha" data-sitekey="6LeH7Y8hAAAAAFd6NZedPq40-NUxbmW3TSDXsAuZ"></div>
                 <div>
                   <p className="mb-2  text-base font-medium text-gray-500">
                     <Link to="/StudForgotPass" className="text-brightRed hover:text-brightRedLight">
