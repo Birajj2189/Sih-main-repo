@@ -15,7 +15,7 @@ export default function Hero3() {
   return (
      <div className="main-container">
    
-     <main className='grid grid-cols-6 gap-6 p-8 md:py-12 md:px-48'>
+     <div className='grid grid-cols-6 gap-6 p-8 md:py-8 md:px-36 lg:py-12 lg:px-64'>
 
           <div className="col-span-6 shadow-lg mx-auto rounded-lg bg-white w-full py-12 px-8 lg:px-16">
                <div className=''>
@@ -55,7 +55,7 @@ export default function Hero3() {
                </div>
                </div>
           </div>
-     </main>
+     </div>
    </div>
   )
 }

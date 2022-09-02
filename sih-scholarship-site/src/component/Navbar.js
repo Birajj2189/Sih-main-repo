@@ -51,6 +51,7 @@ import {
 } from "react-router-dom";
 import About from './About';
 import Dashboard from './Dashboard';
+import EmailVerification from './EmailVerification';
 
 
 
@@ -86,8 +87,8 @@ const NavMenu = [
     href: '/About',
   },
   {
-    name: 'Department Login',
-    href: '/',
+    name: 'Officer Login',
+    href: '/OfficerLogin',
   },
 ]
 const callsToAction = [
@@ -276,26 +277,6 @@ export default function Example() {
                             </Link>
                           ))}
                         </div>
-                        <div className="px-5 py-5 bg-gray-50 sm:px-8 sm:py-8">
-                          <div>
-                            <h3 className="text-sm tracking-wide font-medium text-gray-500 uppercase">Recent Posts</h3>
-                            <ul role="list" className="mt-4 space-y-4">
-                              {recentPosts.map((post) => (
-                                <li key={post.id} className="text-base truncate">
-                                  <Link to={post.href} className="font-medium text-gray-900 hover:text-gray-700">
-                                    {post.name}
-                                  </Link>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                          <div className="mt-5 text-sm">
-                            <Link to="/" className="font-medium text-brightRed hover:text-brightRedLight">
-                              {' '}
-                              View all posts <span aria-hidden="true">&rarr;</span>
-                            </Link>
-                          </div>
-                        </div>
                       </div>
                     </Popover.Panel>
                   </Transition>
@@ -419,6 +400,7 @@ export default function Example() {
 
       <Route path="/Faq" element={<Faq/>}/>  
       <Route path="/RegistrationInstruction" element={<RegistrationInstruction/>}/>  
+      <Route path="/EmailVerification" element={<EmailVerification/>}/>  
 
 
       {/* Footer Routes */}

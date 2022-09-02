@@ -1,16 +1,11 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
 
-export default function StudentResetPass() {
+export default function UserResetPass() {
   return (
-     <div className="-z-10 login-container">
-     <section className="text-gray-500 body-font ">
-       <div className="container px-5 py-24 mx-auto flex flex-wrap items-center">
-         <div className="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0">
-           <h1 className="title-font font-medium text-3xl text-gray-900">National Scholarship Portal</h1>
-           <p className="leading-relaxed mt-4 text-gray-500">Poke slow-carb mixtape knausgaard, typewriter street art gentrify hammock starladder roathse. Craies vegan tousled etsy austin.</p>
-         </div>
-         <div className=" shadow-md lg:w-2/6 md:w-1/2 bg-veryLightGray rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0">
+     <>
+     <div className='main-container w-full px-5 py-24 flex justify-center items-center'>
+          <div className="mx-0 shadow-md lg:w-2/6 md:w-1/2 bg-veryLightGray rounded-lg p-8 flex flex-col w-full">
            <h2 className="text-gray-900 text-2xl font-medium title-font mb-5">Reset Password</h2>
            <div className="mb-4">
              <label htmlFor="full-name" className="tracking-wide leading-7 text-sm text-gray-500">Enter New Password</label>
@@ -28,10 +23,8 @@ export default function StudentResetPass() {
                    Confirm
                  </Link>
              </div>
- 
          </div>
-       </div>
-     </section>
      </div>
+     </>
   )
 }

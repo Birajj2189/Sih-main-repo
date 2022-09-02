@@ -3,6 +3,8 @@ import Navbar from './Dashboard-comp/Navbar'
 import Footer from './Footer'
 import Hero3 from './Dashboard-comp/Hero3';
 import Qualification from './Dashboard-comp/Qualification';
+import UserResetPass from './Dashboard-comp/UserResetPass'; 
+
 import {
   BrowserRouter as Router,
   Route,
@@ -16,6 +18,7 @@ export default function Dashboard() {
      <Routes>
         <Route path="/" element={<Hero3/>}/>
         <Route path="/qualification" element={<Qualification/>}/>
+        <Route path="/ResetPassword" element={<UserResetPass/>}/>
       </Routes>
     <Footer/>
 </>

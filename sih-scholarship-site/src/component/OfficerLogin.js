@@ -55,17 +55,20 @@ export default class OfficerLogin extends Component {
              <label htmlFor="email" className=" tracking-wide leading-7 text-sm text-gray-500">Password</label>
              <input type="password" id="email" name="email" className="w-full bg-white rounded border border-gray-300 focus:border-brightRedLight focus:ring-2 focus:ring-brightRedLight text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
            </div>
+           
+           <div className="g-recaptcha" data-sitekey="6LcOlqghAAAAABbI1dSvtUFcwjKoCcZ2tyJuz_7r"></div>
+
            <div>     
               <div className='flex justify-center '>
                 <Link
-                  to="/"
+                  to="/Office-Dashboard"
                   className="w-full  flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-brightRed hover:bg-brightRedLight active:shadow-lg transition duration-30 ease-in-out"
                 >
                   Login
                 </Link>
               </div>
                 <p className="my-4  text-base font-medium text-gray-500">
-                  <Link to="/Registration" className="text-brightRed hover:text-brightRedLight">
+                  <Link to="/" className="text-brightRed hover:text-brightRedLight">
                   District/State/Ministry Forgot Password ?
                 </Link>
                </p>

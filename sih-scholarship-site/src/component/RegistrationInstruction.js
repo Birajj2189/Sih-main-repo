@@ -108,22 +108,23 @@ export default class RegistrationInstruction extends Component {
           <div className='my-2 '>
                <p className="mb-2 leading-relaxed text-md font-bold text-brightRedLight">Undertaking By Applicant or Parents/Guardian(In Case of Minor)</p>
 
-               
-          <div className="flex items-center mb-2">
-               <input id="default-checkbox1" type="checkbox"  className="checkbox w-4 h-4 text-brightRedLight bg-gray-100 rounded border-gray-300 focus:ring-brightRedLight focus:ring-2"/>
-               <label htmlFor="default-checkbox" className="ml-2 text-left leading-relaxed text-md text-gray-700">I have read and understood the guidelines for registration.</label>
-          </div>
-          <div className="flex items-center mb-2">
-               <input id="default-checkbox2" type="checkbox" value="" className="checkbox w-4 h-4 text-brightRedLight bg-gray-100 rounded border-gray-300 focus:ring-brightRedLight focus:ring-2"/>
-               <label htmlFor="default-checkbox" className="ml-2 leading-relaxed text-left  text-md text-gray-700">I am aware that if more than one application is found to be filled (fresh or renewal), all my/my child's/ward's applications are liable to be rejected.</label>
-          </div>
-          <div className="flex items-center mb-2">
-               <input id="default-checkbox3" type="checkbox" value="" className="checkbox w-4 h-4 text-brightRedLight bg-gray-100 rounded border-gray-300 focus:ring-brightRedLight focus:ring-2"/>
-               <label htmlFor="default-checkbox" className="ml-2 leading-relaxed text-md text-left  text-gray-700">I am aware that my bank account details may be changed only once after due process in accordance with the provisions of the process.</label>
-          </div>
-          <div className='flex w-full justify-center'> 
-               <button type="button" className="w-[8rem] items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-brightRed hover:bg-brightRedLight transition duration-30 ease-in-out" disabled><Link onClick={() => {window.scrollTo({top: 0, left: 0, behavior: 'smooth'});}} to="/Registration" className="w-full text-base font-medium text-white">Continue</Link></button>
-          </div>
+          <form action="">
+               <div className="flex items-center mb-2">
+                    <input id="default-checkbox1" type="checkbox"  className="checkbox w-4 h-4 text-brightRedLight bg-gray-100 rounded border-gray-300 focus:ring-brightRedLight focus:ring-2" required/>
+                    <label htmlFor="default-checkbox" className="ml-2 text-left leading-relaxed text-md text-gray-700">I have read and understood the guidelines for registration.</label>
+               </div>
+               <div className="flex items-center mb-2">
+                    <input id="default-checkbox2" type="checkbox" value="" className="checkbox w-4 h-4 text-brightRedLight bg-gray-100 rounded border-gray-300 focus:ring-brightRedLight focus:ring-2" required/>
+                    <label htmlFor="default-checkbox" className="ml-2 leading-relaxed text-left  text-md text-gray-700">I am aware that if more than one application is found to be filled (fresh or renewal), all my/my child's/ward's applications are liable to be rejected.</label>
+               </div>
+               <div className="flex items-center mb-2">
+                    <input id="default-checkbox3" type="checkbox" value="" className="checkbox w-4 h-4 text-brightRedLight bg-gray-100 rounded border-gray-300 focus:ring-brightRedLight focus:ring-2" required/>
+                    <label htmlFor="default-checkbox" className="ml-2 leading-relaxed text-md text-left  text-gray-700">I am aware that my bank account details may be changed only once after due process in accordance with the provisions of the process.</label>
+               </div>
+               <div className='flex w-full justify-center'> 
+                    <button type="button" className="w-[8rem] items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-brightRed hover:bg-brightRedLight transition duration-30 ease-in-out"><Link onClick={() => {window.scrollTo({top: 0, left: 0, behavior: 'smooth'});}} to="/EmailVerification" className=" text-base font-medium text-white">Continue</Link></button>
+               </div>
+          </form>
           </div>
           </div>
           </div>

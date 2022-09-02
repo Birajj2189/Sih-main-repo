@@ -45,27 +45,33 @@ export class Hero extends Component {
             </div>
             <div className="carousel-inner  w-full overflow-hidden">
               <div className="carousel-item active  float-left w-full">
-                <video className="w-full" autoPlay loop muted>
-                  <source src="https://mdbcdn.b-cdn.net/img/video/Tropical.mp4" type="video/mp4" />
-                </video>
+                <img
+                  src="./caraousel1.jpeg"
+                  class="block w-full"
+                  alt="..."
+                />
                 <div className="carousel-caption hidden md:block text-center">
                   <h5 className="text-xl">First slide label</h5>
                   <p>Some representative placeholder content for the first slide.</p>
                 </div>
               </div>
               <div className="carousel-item  float-left w-full">
-                <video className="w-full" autoPlay loop muted>
-                  <source src="https://mdbcdn.b-cdn.net/img/video/forest.mp4" type="video/mp4" />
-                </video>
+                <img
+                    src="./caraousel2.jpeg"
+                    class="block w-full"
+                    alt="..."
+                />
                 <div className="carousel-caption hidden md:block  text-center">
                   <h5 className="text-xl">Second slide label</h5>
                   <p>Some representative placeholder content for the second slide.</p>
                 </div>
               </div>
               <div className="carousel-item  float-left w-full">
-                <video className="w-full" autoPlay loop muted>
-                  <source src="https://mdbcdn.b-cdn.net/img/video/Agua-natural.mp4" type="video/mp4" />
-                </video>
+                <img
+                      src="./caraousel3.jpeg"
+                      class="block w-full"
+                      alt="..."
+                />
                 <div className="carousel-caption hidden md:block  text-center">
                   <h5 className="text-xl">Third slide label</h5>
                   <p>Some representative placeholder content for the third slide.</p>

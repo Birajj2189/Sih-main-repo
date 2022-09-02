@@ -14,6 +14,7 @@ const user = {
 const userNavigation = [
   { name: 'Your Profile', href: '/Student-Dashboard' },
   { name: 'My Qualifications', href: '/Student-Dashboard/qualification' },
+  { name: 'Reset Password', href: '/Student-Dashboard/ResetPassword' },
   { name: 'Logout', href: '/' },
 ]
 
@@ -24,14 +25,6 @@ function classNames(...classes) {
 export default function Navbar() {
   return (
     <>
-      {/*
-        This example requires updating your template:
-
-        ```
-        <html class="h-full bg-gray-100">
-        <body class="h-full">
-        ```
-      */}
       <div className="min-h-full">
         <Disclosure as="nav" className="bg-veryDarkBlue">
           {({ open }) => (

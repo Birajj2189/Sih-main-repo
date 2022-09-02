@@ -1,7 +1,6 @@
 /* This example requires Tailwind CSS v2.0+ */
 import React from 'react'
 import {Link} from 'react-router-dom';
-import reCAPTCHA from 'react-google-recaptcha'
 
 const recaptchaRef = React.createRef();
 
@@ -30,7 +29,7 @@ export default function Example() {
             <label htmlFor="email" className=" tracking-wide leading-7 text-sm text-gray-500" aria-required>Password</label>
             <input type="password" id="email" name="email" aria-required className="w-full bg-white rounded border border-gray-300 focus:border-brightRedLight focus:ring-2 focus:ring-brightRedLight text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
           </div>
-                <div class="g-recaptcha" data-sitekey="6LeH7Y8hAAAAAFd6NZedPq40-NUxbmW3TSDXsAuZ"></div>
+                <div className="g-recaptcha" data-sitekey="6LcOlqghAAAAABbI1dSvtUFcwjKoCcZ2tyJuz_7r"></div>
                 <div>
                   <p className="mb-2  text-base font-medium text-gray-500">
                     <Link to="/StudForgotPass" className="text-brightRed hover:text-brightRedLight">
